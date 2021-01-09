@@ -1,10 +1,7 @@
-const path = require("path");
+import "./styles/style.scss";
 
-module.exports = {
-    context: path.join(__dirname, "src"),
-    entry: './index.js',
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
-};
+async function start() {
+    return await Promise.resolve("async is working");
+}
+
+start().then(console.log);
