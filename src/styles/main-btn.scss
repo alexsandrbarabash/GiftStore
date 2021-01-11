@@ -1,0 +1,40 @@
+@mixin main-btn($border-color, $bg-color, $color-text, ) {
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  background-color: $bg-color;
+  color: $color-text;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 13px 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+  cursor: pointer;
+
+  @content;
+
+  &:hover {
+    @if $bg-color==none or $bg-color==transparent {
+      color: #FFF;
+      background-color: $border-color;
+
+    } @else {
+      color: $bg-color;
+      background-color: transparent;
+    }
+  }
+
+  &:active, &:focus {
+    outline: none;
+
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+}
+
+
+
+

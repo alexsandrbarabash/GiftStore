@@ -68,7 +68,7 @@ module.exports = {
       },
       {
         test: /\.(ttf|woff|woff2|eot)$/,
-        use: ["file-loader"],
+        use: [{loader: "file-loader",  options: {publicPath: '/',}}],
       },
       {
         test: /\.m?js$/,
