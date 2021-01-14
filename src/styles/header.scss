@@ -61,7 +61,7 @@ $distance-burger-item: -15px;
   display: none;
   position: relative;
   margin-left: 20px;
-  margin-top: -$distance-burger-item+5;
+  margin-top: -$distance-burger-item+10;
 
   .top {
     @extend %burger-item;
