@@ -62,7 +62,6 @@ $distance-burger-item: -15px;
   position: relative;
   margin-left: 20px;
   margin-top: -$distance-burger-item+5;
-  //margin-bottom: -$distance-burger-item+5;
 
   .top {
     @extend %burger-item;
@@ -132,7 +131,6 @@ $distance-burger-item: -15px;
   }
 }
 
-$time-animation-burger: max-height 0.5s linear;
 
 @media (max-width: 500px) {
   .burger {
@@ -148,23 +146,21 @@ $time-animation-burger: max-height 0.5s linear;
     height: auto;
 
     overflow: hidden;
-    transition: $time-animation-burger;
+    transition: max-height 0.5s linear;
     max-height: 50px;
+
     .logo {
       margin-top: 30px;
-      //transition: $time-animation-burger;
 
     }
 
     .header-item {
       padding-left: 20px;
-      //transition: $time-animation-burger;
     }
 
     .header-btn {
       justify-self: start;
       margin-bottom: 20px;
-      //transition: $time-animation-burger;
     }
 
     .btn-empty {
@@ -181,7 +177,6 @@ $time-animation-burger: max-height 0.5s linear;
         text-align: left;
 
       }
-      //transition: $time-animation-burger;
 
     }
 
