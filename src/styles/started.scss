@@ -1,0 +1,66 @@
+@import "main-btn";
+@import "adaptive-font";
+
+.started {
+  height: 240px;
+  display: grid;
+  background-color: #F7941E;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+
+.started-title {
+  font-family: Gilroy-Bold;
+  //font-size: 32px;
+  line-height: 140.62%;
+  font-weight: 900;
+  @include adaptiv-font(32, 24);
+}
+
+.started-subtitle {
+  font-family: Gilroy;
+  //font-size: 32px;
+  line-height: 140.62%;
+  font-weight: 400;
+  @include adaptiv-font(32, 24);
+}
+
+
+.started-btn-dark {
+  @include main-btn(#231F20, #231F20, #FFF) {
+    margin-right: 20px;
+    margin-bottom: 15px;
+    padding: 13px 40px;
+  }
+}
+
+.started-btn-empty-dark {
+  @include main-btn(#231F20, transparent, #231F20) {
+    padding: 13px 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .started-buttons {
+    //justify-self: end;
+    display: grid;
+    grid-template-rows:1fr 1fr;
+    grid-row-gap: 20px;
+  }
+
+  .started-btn-dark {
+    margin-right: 0px;
+    margin-bottom: 0px;
+
+  }
+}
+
+@media (max-width: 550px) {
+  .started {
+    grid-template-columns: 1fr;
+  }
+}
+
+
