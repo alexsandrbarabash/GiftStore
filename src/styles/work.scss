@@ -1,73 +1,77 @@
 @import "adaptive-font";
 @import "adaptive-line-height";
 @import "adaptive-margin-padding";
-@import "main-btn";
 
-.home {
+.work {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: center;
   background-color: #F1F1F2;
-
 }
 
-.home-content {
+.work-img {
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.work-content {
   align-self: center;
   @include adaptiv-margin-padding(162, 30, 640, "pl");
   @include adaptiv-margin-padding(162, 30, 640, "pr");
-}
 
-.home-title {
-  font-family: Gilroy;
-  @include adaptiv-font(56, 25);
-  @include adaptiv-line-height(69, 33);
-  font-weight: bold;
-}
 
-.home-subtitle {
-  font-family: Gilroy;
-  @include adaptiv-font(20, 14);
-  @include adaptiv-line-height(30, 26);
-  @include adaptiv-margin-padding(52, 20, 640, "mb");
-  font-weight: 400;
-}
-
-.home-img {
-  overflow: hidden;
-  text-align: center;
-
-  img {
-    height: 100%;
-    width: 100%;
-  }
-}
-
-.btn-orange {
-  @include main-btn(#F7941E, #F7941E, #FFFFFF) {
+  .btn-empty {
+    transform: translateY(0);
     @include adaptiv-font(20, 14);
   }
+}
 
+.work-title {
+  font-family: Gilroy;
+  font-size: 32px;
+  line-height: 140.62%;
+  font-weight: 500;
+  @include adaptiv-line-height(69, 33);
+  @include adaptiv-font(32, 23);
+}
+
+.work-subtitle {
+  font-family: Gilroy;
+  @include adaptiv-line-height(30, 26);
+  @include adaptiv-font(20, 14);-
+  font-weight: 400;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 640px) {
-  .home {
+  .work {
     grid-template-columns: 1fr;
   }
 
-  .home-content {
+  .work-content {
     display: grid;
+    grid-row-start: 1;
     margin-bottom: 20px;
     @include adaptiv-margin-padding(25, 15, 320, "pr");
     @include adaptiv-margin-padding(25, 15, 320, "pl");
 
-    .btn-orange {
+    .btn-empty {
       justify-self: center;
     }
   }
-  .home-title {
+
+  .work-img {
+    grid-row-start: 2;
+  }
+
+  .work-title {
     text-align: center;
   }
 
-  .home-subtitle {
+  .work-subtitle {
     text-align: center;
   }
 

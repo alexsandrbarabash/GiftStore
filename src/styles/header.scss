@@ -117,12 +117,15 @@ $distance-burger-item: -15px;
       font-size: 15px;
     }
   }
-  .btn-empty {
-    @include main-btn(#F7941E, none, #F7941E) {
-      font-size: 13px;
-      padding: 5px 10px;
+  .header-btn{
+    .btn-empty {
+      @include main-btn(#F7941E, none, #F7941E) {
+        font-size: 13px;
+        padding: 5px 10px;
+      }
     }
   }
+
 }
 
 @media (min-width: 500px) and (max-width: 556px) {
