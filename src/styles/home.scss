@@ -1,29 +1,37 @@
 @import "adaptive-font";
 @import "adaptive-line-height";
+@import "adaptive-margin-padding";
+@import "main-btn";
 
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
   //grid-template-columns: 1fr;
+  justify-content: center;
   background-color: #F1F1F2;
 
 }
 
-
+.home-content {
+  align-self: center;
+  padding: 0px 162px;
+  @include adaptiv-margin-padding(162, 30, 640, "pl");
+  @include adaptiv-margin-padding(162, 30, 640, "pr");
+}
 
 .home-title {
   font-family: Gilroy;
   @include adaptiv-font(56, 25);
   @include adaptiv-line-height(69, 33);
+  font-weight: bold;
 }
 
 .home-subtitle {
   font-family: Gilroy;
   @include adaptiv-font(20, 14);
   @include adaptiv-line-height(27, 26);
-
+  @include adaptiv-margin-padding(52, 20, 640, "mb");
 }
-
 
 .home-img {
   overflow: hidden;
@@ -33,4 +41,36 @@
     height: 100%;
     width: 100%;
   }
+}
+
+.btn-orange {
+  @include main-btn(#F7941E, #F7941E, #FFFFFF) {
+    @include adaptiv-font(20, 14);
+  }
+
+}
+
+@media (max-width: 640px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+
+  .home-content {
+    display: grid;
+    margin-bottom: 20px;
+    @include adaptiv-margin-padding(25, 15, 320, "pr");
+    @include adaptiv-margin-padding(25, 15, 320, "pl");
+
+    .btn-orange {
+      justify-self: center;
+    }
+  }
+  .home-title {
+    text-align: center;
+  }
+
+  .home-subtitle {
+    text-align: center;
+  }
+
 }

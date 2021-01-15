@@ -39,7 +39,7 @@
 }
 
 .btn-empty {
-  @include main-btn(#F7941E, none, #F7941E) {
+  @include main-btn(#F7941E, transparent, #F7941E) {
     transform: translateY(-25%);
   }
 

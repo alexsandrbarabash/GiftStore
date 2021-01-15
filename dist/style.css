@@ -340,7 +340,7 @@ template {
 .btn-empty {
   border: 1px solid #F7941E;
   border-radius: 10px;
-  background-color: none;
+  background-color: transparent;
   color: #F7941E;
   font-family: 'Gilroy', sans-serif;
   font-size: 18px;
@@ -475,17 +475,26 @@ template {
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: center;
   background-color: #F1F1F2; }
+
+.home-content {
+  align-self: center;
+  padding: 0px 162px;
+  padding-left: calc(30px + 132 * ((100vw - 640px) / 800));
+  padding-right: calc(30px + 132 * ((100vw - 640px) / 800)); }
 
 .home-title {
   font-family: Gilroy;
   font-size: calc(25px + 31 * ((100vw - 320px) / 1120));
-  line-height: calc(33px + 36 * ((100vw - 320px) / 1120)); }
+  line-height: calc(33px + 36 * ((100vw - 320px) / 1120));
+  font-weight: bold; }
 
 .home-subtitle {
   font-family: Gilroy;
   font-size: calc(14px + 6 * ((100vw - 320px) / 1120));
-  line-height: calc(26px + 1 * ((100vw - 320px) / 1120)); }
+  line-height: calc(26px + 1 * ((100vw - 320px) / 1120));
+  margin-bottom: calc(20px + 32 * ((100vw - 640px) / 800)); }
 
 .home-img {
   overflow: hidden;
@@ -493,4 +502,41 @@ template {
   .home-img img {
     height: 100%;
     width: 100%; }
+
+.btn-orange {
+  border: 1px solid #F7941E;
+  border-radius: 10px;
+  background-color: #F7941E;
+  color: #FFFFFF;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 13px 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  font-size: calc(14px + 6 * ((100vw - 320px) / 1120)); }
+  .btn-orange:hover {
+    color: #F7941E;
+    background-color: transparent; }
+  .btn-orange:active, .btn-orange:focus {
+    outline: none; }
+  .btn-orange::-moz-focus-inner {
+    border: 0; }
+
+@media (max-width: 640px) {
+  .home {
+    grid-template-columns: 1fr; }
+  .home-content {
+    display: grid;
+    margin-bottom: 20px;
+    padding-right: calc(15px + 10 * ((100vw - 320px) / 1120));
+    padding-left: calc(15px + 10 * ((100vw - 320px) / 1120)); }
+    .home-content .btn-orange {
+      justify-self: center; }
+  .home-title {
+    text-align: center; }
+  .home-subtitle {
+    text-align: center; } }
 

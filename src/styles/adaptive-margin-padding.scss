@@ -1,0 +1,27 @@
+$maxWidth: 1440;
+@mixin adaptiv-margin-padding($pcSize, $mobSize, $minWidth, $tag) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - $minWidth;
+  $newSize: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth +px}) / #{$maxWidth}));
+  //font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth +px}) / #{$maxWidth}));
+
+
+  @if $tag == "mb" {
+    margin-bottom: $newSize;
+  } @else if ($tag == "mt") {
+    margin-top: $newSize;
+  } @else if ($tag == "ml") {
+    margin-left: $newSize;
+  } @else if ($tag == "mr") {
+    margin-right: $newSize;
+  } @else if ($tag == "pb") {
+    padding-bottom: $newSize;
+  } @else if ($tag == "pt") {
+    padding-top: $newSize;
+  } @else if ($tag == "pl") {
+    padding-left: $newSize;
+  } @else if ($tag == "pr") {
+    padding-right: $newSize;
+  }
+
+}
