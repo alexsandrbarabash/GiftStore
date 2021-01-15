@@ -1,0 +1,54 @@
+@import "adaptive-margin-padding";
+@import "adaptive-font";
+@import "adaptive-gap";
+@import "card";
+.services{
+  height: 1000px;
+}
+
+.services-title {
+  text-align: center;
+  font-family: Gilroy;
+  line-height: 38px;
+  @include adaptiv-margin-padding(96, 32, 320, "mt");
+  @include adaptiv-font(32, 25);
+  font-weight: 500;
+  @include adaptiv-margin-padding(25, 15, 320, "mr");
+  @include adaptiv-margin-padding(25, 15, 320, "ml");
+}
+
+.serveces-subtitle {
+  text-align: center;
+  margin-bottom: 64px;
+  font-family: Gilroy;
+  font-size: 18px;
+  line-height: 135.94%;
+  font-weight: 400;
+  @include adaptiv-margin-padding(25, 15, 320, "mr");
+  @include adaptiv-margin-padding(25, 15, 320, "ml");
+}
+
+.cards {
+  display: grid;
+  margin-right: 135px;
+  margin-left: 135px;
+  @include adaptiv-margin-padding(135, 60, 830, "mr");
+  @include adaptiv-margin-padding(135, 60, 830, "ml");
+  grid-template-columns: repeat(auto-fit, minmax(166px, 1fr));
+  grid-column-gap: 30px;
+  @include adaptiv-gap(30, 20, 790, "c");
+}
+
+@media (max-width: 430px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+
+}
+
+@media (max-width: 360px) {
+  .cards {
+    margin: 10px;
+  }
+
+}

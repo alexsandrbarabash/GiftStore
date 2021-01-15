@@ -1,0 +1,15 @@
+$maxWidth: 1440;
+@mixin adaptiv-gap($pcSize, $mobSize, $minWidth, $tag) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - $minWidth;
+  $newSize: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth +px}) / #{$maxWidth}));
+
+
+  @if $tag == "c" {
+    grid-column-gap: $newSize;
+  } @else if ($tag == "r") {
+    grid-column-gap: $newSize;
+  } @else if ($tag == "g") {
+    gap: $newSize;
+  }
+}

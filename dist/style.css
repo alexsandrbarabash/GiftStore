@@ -307,6 +307,10 @@ template {
   font-family: 'Gilroy';
   src: url(/fa652e766b6a85a1f9cbe6878a072c63.ttf) format("truetype"); }
 
+@font-face {
+  font-family: Roboto;
+  src: url(/03523cf578d69fa923226ff457b92d90.ttf) format("truetype"); }
+
 * {
   margin: 0;
   padding: 0; }
@@ -472,6 +476,10 @@ template {
   .active {
     max-height: 432px; } }
 
+.inner {
+  display: grid;
+  grid-template-rows: 1fr 1fr; }
+
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -558,19 +566,19 @@ template {
     font-size: calc(14px + 6 * ((100vw - 320px) / 1120)); }
 
 .work-title {
+  margin: 0;
   font-family: Gilroy;
-  font-size: 32px;
-  line-height: 140.62%;
   font-weight: 500;
-  line-height: calc(33px + 36 * ((100vw - 320px) / 1120));
+  line-height: calc(30px + 39 * ((100vw - 320px) / 1120));
   font-size: calc(23px + 9 * ((100vw - 320px) / 1120)); }
 
 .work-subtitle {
   font-family: Gilroy;
-  line-height: calc(26px + 4 * ((100vw - 320px) / 1120));
+  line-height: calc(24px + 6 * ((100vw - 320px) / 1120));
   font-size: calc(14px + 6 * ((100vw - 320px) / 1120));
   font-weight: 400;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  margin-bottom: calc(4px + 11 * ((100vw - 320px) / 1120)); }
 
 @media (max-width: 640px) {
   .work {
@@ -586,7 +594,81 @@ template {
   .work-img {
     grid-row-start: 2; }
   .work-title {
+    margin: 0.67em 0;
     text-align: center; }
   .work-subtitle {
     text-align: center; } }
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr 166px;
+  background-color: #FAFAFA;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s linear; }
+  .card:hover {
+    background-color: #FFFFFF;
+    filter: drop-shadow(15px 15px 20px rgba(0, 0, 0, 0.05)); }
+
+.card-content {
+  display: grid;
+  padding: 24px; }
+
+.card-title {
+  font-family: Gilroy;
+  font-size: 20px;
+  line-height: 24px; }
+
+.card-link {
+  align-self: end;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px; }
+
+.card-img img {
+  width: 100%;
+  overflow: hidden; }
+
+.services {
+  height: 1000px; }
+
+.services-title {
+  text-align: center;
+  font-family: Gilroy;
+  line-height: 38px;
+  margin-top: calc(32px + 64 * ((100vw - 320px) / 1120));
+  font-size: calc(25px + 7 * ((100vw - 320px) / 1120));
+  font-weight: 500;
+  margin-right: calc(15px + 10 * ((100vw - 320px) / 1120));
+  margin-left: calc(15px + 10 * ((100vw - 320px) / 1120)); }
+
+.serveces-subtitle {
+  text-align: center;
+  margin-bottom: 64px;
+  font-family: Gilroy;
+  font-size: 18px;
+  line-height: 135.94%;
+  font-weight: 400;
+  margin-right: calc(15px + 10 * ((100vw - 320px) / 1120));
+  margin-left: calc(15px + 10 * ((100vw - 320px) / 1120)); }
+
+.cards {
+  display: grid;
+  margin-right: 135px;
+  margin-left: 135px;
+  margin-right: calc(60px + 75 * ((100vw - 830px) / 610));
+  margin-left: calc(60px + 75 * ((100vw - 830px) / 610));
+  grid-template-columns: repeat(auto-fit, minmax(166px, 1fr));
+  grid-column-gap: 30px;
+  grid-column-gap: calc(20px + 10 * ((100vw - 790px) / 650)); }
+
+@media (max-width: 430px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); } }
+
+@media (max-width: 360px) {
+  .cards {
+    margin: 10px; } }
 

@@ -133,9 +133,10 @@ eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*\n* lo
 /*!***************************!*\
   !*** ./styles/style.scss ***!
   \***************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("throw new Error(\"Module build failed (from ../node_modules/mini-css-extract-plugin/dist/loader.js):\\nModuleBuildError: Module build failed (from ../node_modules/sass-loader/dist/cjs.js):\\nSassError: Invalid CSS after \\\"...v-font(20, 14);\\\": expected \\\"}\\\", was \\\"-\\\"\\n        on line 44 of src/styles/work.scss\\n        from line 5 of src/styles/style.scss\\n>>   @include adaptiv-font(20, 14);-\\r\\n   -------------------------------^\\n\\n    at processResult (D:\\\\KPI\\\\Programing\\\\Proect\\\\Java sc\\\\GiftStore\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:597:19)\\n    at D:\\\\KPI\\\\Programing\\\\Proect\\\\Java sc\\\\GiftStore\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:691:5\\n    at D:\\\\KPI\\\\Programing\\\\Proect\\\\Java sc\\\\GiftStore\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:399:11\\n    at D:\\\\KPI\\\\Programing\\\\Proect\\\\Java sc\\\\GiftStore\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:251:18\\n    at context.callback (D:\\\\KPI\\\\Programing\\\\Proect\\\\Java sc\\\\GiftStore\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:124:13)\\n    at Object.callback (D:\\\\KPI\\\\Programing\\\\Proect\\\\Java sc\\\\GiftStore\\\\node_modules\\\\sass-loader\\\\dist\\\\index.js:62:7)\\n    at Object.done [as callback] (D:\\\\KPI\\\\Programing\\\\Proect\\\\Java sc\\\\GiftStore\\\\node_modules\\\\neo-async\\\\async.js:8069:18)\\n    at options.error (D:\\\\KPI\\\\Programing\\\\Proect\\\\Java sc\\\\GiftStore\\\\node_modules\\\\node-sass\\\\lib\\\\index.js:293:32)\");\n\n//# sourceURL=webpack:///./styles/style.scss?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./styles/style.scss?");
 
 /***/ }),
 

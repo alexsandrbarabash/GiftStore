@@ -1,0 +1,44 @@
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr 166px;
+  background-color: #FAFAFA;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background-color: #FFFFFF;
+    filter: drop-shadow(15px 15px 20px rgba(0, 0, 0, 0.05));
+  }
+
+}
+
+.card-content {
+  display: grid;
+  padding: 24px;
+}
+
+.card-title {
+  font-family: Gilroy;
+  font-size: 20px;
+  line-height: 24px;
+
+}
+
+.card-link {
+  align-self: end;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.card-img {
+  img {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
