@@ -1,0 +1,36 @@
+@import "adaptive-font";
+@import "adaptive-line-height";
+
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  //grid-template-columns: 1fr;
+  background-color: #F1F1F2;
+
+}
+
+
+
+.home-title {
+  font-family: Gilroy;
+  @include adaptiv-font(56, 25);
+  @include adaptiv-line-height(69, 33);
+}
+
+.home-subtitle {
+  font-family: Gilroy;
+  @include adaptiv-font(20, 14);
+  @include adaptiv-line-height(27, 26);
+
+}
+
+
+.home-img {
+  overflow: hidden;
+  text-align: center;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
