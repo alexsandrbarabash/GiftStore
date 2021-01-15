@@ -13,15 +13,13 @@
 
 .started-title {
   font-family: 'Gilroy-Bold', sans-serif;
-  //font-size: 32px;
   line-height: 140.62%;
   font-weight: 900;
   @include adaptiv-font(32, 24);
 }
 
 .started-subtitle {
-  font-family: Gilroy;
-  //font-size: 32px;
+  font-family: 'Gilroy', sans-serif;
   line-height: 140.62%;
   font-weight: 400;
   @include adaptiv-font(32, 24);
