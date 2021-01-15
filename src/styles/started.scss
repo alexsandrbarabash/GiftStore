@@ -12,7 +12,7 @@
 
 
 .started-title {
-  font-family: Gilroy-Bold;
+  font-family: 'Gilroy-Bold', sans-serif;
   //font-size: 32px;
   line-height: 140.62%;
   font-weight: 900;
@@ -44,7 +44,6 @@
 
 @media (max-width: 900px) {
   .started-buttons {
-    //justify-self: end;
     display: grid;
     grid-template-rows:1fr 1fr;
     grid-row-gap: 20px;

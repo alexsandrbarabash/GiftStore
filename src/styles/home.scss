@@ -17,14 +17,14 @@
 }
 
 .home-title {
-  font-family: Gilroy;
+  font-family: 'Gilroy', sans-serif;
   @include adaptiv-font(56, 25);
   @include adaptiv-line-height(69, 33);
   font-weight: bold;
 }
 
 .home-subtitle {
-  font-family: Gilroy;
+  font-family: 'Gilroy', sans-serif;
   @include adaptiv-font(20, 14);
   @include adaptiv-line-height(30, 26);
   @include adaptiv-margin-padding(52, 20, 640, "mb");

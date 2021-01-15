@@ -31,14 +31,14 @@
 
 .work-title {
   margin: 0;
-  font-family: Gilroy;
+  font-family: 'Gilroy', sans-serif;
   font-weight: 500;
   @include adaptiv-line-height(69, 30);
   @include adaptiv-font(32, 23);
 }
 
 .work-subtitle {
-  font-family: Gilroy;
+  font-family: 'Gilroy', sans-serif;
   @include adaptiv-line-height(30, 24);
   @include adaptiv-font(20, 14);
   font-weight: 400;

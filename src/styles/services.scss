@@ -9,7 +9,7 @@
 
 .services-title {
   text-align: center;
-  font-family: Gilroy;
+  font-family: 'Gilroy', sans-serif;
   line-height: 38px;
   @include adaptiv-margin-padding(96, 32, 320, "mt");
   @include adaptiv-font(32, 25);
@@ -21,7 +21,7 @@
 .serveces-subtitle {
   text-align: center;
   margin-bottom: 64px;
-  font-family: Gilroy;
+  font-family: 'Gilroy', sans-serif;
   font-size: 18px;
   line-height: 135.94%;
   font-weight: 400;
