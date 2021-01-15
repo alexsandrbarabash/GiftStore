@@ -3,7 +3,6 @@ $maxWidth: 1440;
   $addSize: $pcSize - $mobSize;
   $maxWidth: $maxWidth - $minWidth;
   $newSize: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth +px}) / #{$maxWidth}));
-  //font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth +px}) / #{$maxWidth}));
 
 
   @if $tag == "mb" {
