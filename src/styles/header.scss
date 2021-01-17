@@ -86,7 +86,7 @@ $distance-burger-item: -15px;
 
 }
 
-.active {
+.header-active {
   .top {
     top: -($height-burger-item/2);
     transform: rotate(45deg);
@@ -185,7 +185,7 @@ $distance-burger-item: -15px;
 
   }
 
-  .active {
+  .header-active {
 
     max-height: 432px;
   }

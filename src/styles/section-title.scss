@@ -1,0 +1,26 @@
+@import "adaptive-margin-padding";
+@import "adaptive-font";
+
+%title {
+  text-align: center;
+  font-family: 'Gilroy', sans-serif;
+  line-height: 38px;
+  @include adaptiv-margin-padding(96, 32, 320, "mt");
+  @include adaptiv-font(32, 25);
+  font-weight: 500;
+  @include adaptiv-margin-padding(25, 15, 320, "mr");
+  @include adaptiv-margin-padding(25, 15, 320, "ml");
+  @include adaptiv-margin-padding(20, 10, 320, "mb" )
+
+}
+
+%subtitle {
+  text-align: center;
+  margin-bottom: 64px;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  line-height: 135.94%;
+  font-weight: 400;
+  @include adaptiv-margin-padding(25, 15, 320, "mr");
+  @include adaptiv-margin-padding(25, 15, 320, "ml");
+}
