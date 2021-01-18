@@ -1,0 +1,80 @@
+@import "adaptive-margin-padding";
+
+footer {
+  margin-top: 80px;
+  background: #FAFAFA;
+
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  @include adaptiv-margin-padding(220, 70, 650, "mr");
+  @include adaptiv-margin-padding(220, 70, 650, "ml");
+  padding-bottom: 53px;
+  padding-top: 90px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #231F20;
+
+}
+
+.footer__nav-item {
+  display: flex;
+  align-items: center;
+  font-family: Gilroy;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.footer-logo {
+  width: 100px;
+  height: 90px;
+  background: url("../assets/img/LogoFooter.png");
+  background-position: center;
+}
+
+.links {
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      display: flex;
+
+      justify-content: center;
+      align-content: center;
+      list-style-type: none;
+      margin: 25px 12.5px;
+      margin-bottom: 0px;
+    }
+  }
+
+  a {
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 100px;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.company {
+  font-family: Gilroy;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 650px) {
+  .footer-nav {
+    display: none;
+  }
+}

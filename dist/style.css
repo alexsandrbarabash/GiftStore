@@ -857,7 +857,8 @@ template {
   display: grid;
   grid-template-rows: 1fr 1fr auto;
   grid-row-gap: 15px;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-top: 15px; }
   .blog-card:hover {
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05); }
 
@@ -883,7 +884,7 @@ template {
   .blog-accordion__main {
     grid-template-rows: 270px 1fr; }
   .blog-cards {
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); } }
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); } }
 
 @media (max-width: 650px) {
   .blog-accordion__main {
@@ -909,6 +910,68 @@ template {
     bottom: 5px; }
   .blog-card {
     margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 15px; } }
+    margin-right: 15px; } }
+
+footer {
+  margin-top: 80px;
+  background: #FAFAFA; }
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  margin-right: calc(70px + 150 * ((100vw - 650px) / 790));
+  margin-left: calc(70px + 150 * ((100vw - 650px) / 790));
+  padding-bottom: 53px;
+  padding-top: 90px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #231F20; }
+
+.footer__nav-item {
+  display: flex;
+  align-items: center;
+  font-family: Gilroy;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold; }
+
+.footer-logo {
+  width: 100px;
+  height: 90px;
+  background: url(assets/img/LogoFooter.png);
+  background-position: center; }
+
+.links ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .links ul li {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    list-style-type: none;
+    margin: 25px 12.5px;
+    margin-bottom: 0px; }
+
+.links a {
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  background: #000000;
+  color: #FFFFFF;
+  border-radius: 100px;
+  text-align: center;
+  cursor: pointer; }
+
+.company {
+  font-family: Gilroy;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 5px; }
+
+@media (max-width: 650px) {
+  .footer-nav {
+    display: none; } }
 
