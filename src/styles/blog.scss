@@ -51,14 +51,14 @@
 }
 
 .accordion__main-title {
-  font-family: Gilroy;
+  font-family: 'Gilroy', sans-serif;
   @include adaptiv-font(48, 24);
   @include adaptiv-line-height(58, 26);
   color: #FFFFFF;
 }
 
 .accordion__main-author {
-  font-family: Gilroy;
+  font-family: 'Gilroy', sans-serif;
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 15px;
