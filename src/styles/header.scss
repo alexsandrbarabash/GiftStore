@@ -1,17 +1,21 @@
-@import "main-btn";
+@import 'main-btn';
 
 * {
   margin: 0;
   padding: 0;
 }
 
-
 .header {
   display: grid;
   align-content: center;
-  grid-template-columns:  1fr minmax(300px, 1fr)  1fr;
-  background-color: #FAFAFA;
+  grid-template-columns: 1fr minmax(300px, 1fr) 1fr;
+  background-color: #fafafa;
   height: 116px;
+
+  a {
+    color: #000 !important;
+    text-decoration: none;
+  }
 }
 
 .logo {
@@ -39,10 +43,9 @@
 }
 
 .btn-empty {
-  @include main-btn(#F7941E, transparent, #F7941E) {
+  @include main-btn(#f7941e, transparent, #f7941e) {
     transform: translateY(-25%);
   }
-
 }
 
 $height-burger-item: 4px;
@@ -50,19 +53,26 @@ $distance-burger-item: -15px;
 
 %burger-item {
   position: absolute;
-  background: #F7941E;
+  background: #f7941e;
   width: 40px;
   height: $height-burger-item;
   border-radius: 100px;
   transition: all 0.5s linear;
 }
 
+.burger-inner {
+  display: none;
+  height: 50px;
+  width: 45px;
+  margin-left: 20px;
+  margin-top: -$distance-burger-item + 10;
+  cursor: pointer;
+}
+
 .burger {
   display: none;
   position: relative;
-  margin-left: 20px;
-  margin-top: -$distance-burger-item+10;
-
+  z-index: 1000;
   .top {
     @extend %burger-item;
     top: $distance-burger-item + $height-burger-item;
@@ -70,20 +80,16 @@ $distance-burger-item: -15px;
 
   .middle {
     @extend %burger-item;
-
   }
 
   .bottom {
     @extend %burger-item;
     bottom: $distance-burger-item;
-
   }
 
   &:hover {
     opacity: 0.65;
   }
-
-
 }
 
 .header-active {
@@ -94,16 +100,13 @@ $distance-burger-item: -15px;
 
   .middle {
     opacity: 0;
-
   }
 
   .bottom {
     bottom: -($height-burger-item/2);
     transform: rotate(-45deg);
   }
-
 }
-
 
 @media (min-width: 500px) and (max-width: 707px) {
   .header-btn {
@@ -117,15 +120,15 @@ $distance-burger-item: -15px;
       font-size: 15px;
     }
   }
-  .header-btn{
+
+  .header-btn {
     .btn-empty {
-      @include main-btn(#F7941E, none, #F7941E) {
+      @include main-btn(#f7941e, none, #f7941e) {
         font-size: 13px;
         padding: 5px 10px;
       }
     }
   }
-
 }
 
 @media (min-width: 500px) and (max-width: 556px) {
@@ -134,17 +137,18 @@ $distance-burger-item: -15px;
   }
 }
 
-
 @media (max-width: 500px) {
   .burger {
     display: block;
   }
+  .burger-inner {
+    display: block;
+  }
 
   .header {
-
     align-items: start;
     align-content: start;
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
     grid-row-gap: 20px;
     height: auto;
 
@@ -154,7 +158,6 @@ $distance-burger-item: -15px;
 
     .logo {
       margin-top: 30px;
-
     }
 
     .header-item {
@@ -167,27 +170,22 @@ $distance-burger-item: -15px;
     }
 
     .btn-empty {
-      @include main-btn(#F7941E, transparent, #F7941E) {
+      @include main-btn(#f7941e, transparent, #f7941e) {
         transform: translateY(0);
       }
     }
 
     .nav {
-      grid-template-columns:1fr;
+      grid-template-columns: 1fr;
       grid-row-gap: 20px;
 
       .nav-item {
         text-align: left;
-
       }
-
     }
-
   }
 
   .header-active {
-
     max-height: 432px;
   }
-
 }

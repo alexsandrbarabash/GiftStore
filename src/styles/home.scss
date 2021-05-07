@@ -1,19 +1,22 @@
-@import "adaptive-font";
-@import "adaptive-line-height";
-@import "adaptive-margin-padding";
-@import "main-btn";
+@import 'adaptive-font';
+@import 'adaptive-line-height';
+@import 'adaptive-margin-padding';
+@import 'main-btn';
+
+a {
+  cursor: pointer;
+}
 
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #F1F1F2;
-
+  background-color: #f1f1f2;
 }
 
 .home-content {
   align-self: center;
-  @include adaptiv-margin-padding(162, 30, 640, "pl");
-  @include adaptiv-margin-padding(162, 30, 640, "pr");
+  @include adaptiv-margin-padding(162, 30, 640, 'pl');
+  @include adaptiv-margin-padding(162, 30, 640, 'pr');
 }
 
 .home-title {
@@ -27,7 +30,7 @@
   font-family: 'Gilroy', sans-serif;
   @include adaptiv-font(20, 14);
   @include adaptiv-line-height(30, 26);
-  @include adaptiv-margin-padding(52, 20, 640, "mb");
+  @include adaptiv-margin-padding(52, 20, 640, 'mb');
   font-weight: 400;
 }
 
@@ -42,10 +45,9 @@
 }
 
 .btn-orange {
-  @include main-btn(#F7941E, #F7941E, #FFFFFF) {
+  @include main-btn(#f7941e, #f7941e, #ffffff) {
     @include adaptiv-font(20, 14);
   }
-
 }
 
 @media (max-width: 640px) {
@@ -56,8 +58,8 @@
   .home-content {
     display: grid;
     margin-bottom: 20px;
-    @include adaptiv-margin-padding(25, 15, 320, "pr");
-    @include adaptiv-margin-padding(25, 15, 320, "pl");
+    @include adaptiv-margin-padding(25, 15, 320, 'pr');
+    @include adaptiv-margin-padding(25, 15, 320, 'pl');
 
     .btn-orange {
       justify-self: center;
@@ -70,5 +72,4 @@
   .home-subtitle {
     text-align: center;
   }
-
 }
